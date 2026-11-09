@@ -1,4 +1,4 @@
-const multiplyValue = (value: number, multiplier?: number) => {
+const multiplyValue = (value: number, multiplier?: number): number => {
   if (multiplier === undefined) {
     return value * 2;
   } else {
@@ -22,7 +22,6 @@ type Coordinate = readonly [
   locationName: string,
 ];
 function formatCoordinate(coordinate: Coordinate): string {
-  //   console.log(coordinate);
   const [latitude, longitude, locationName] = coordinate;
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }

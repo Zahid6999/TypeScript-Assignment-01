@@ -1,13 +1,14 @@
-type hierarchy work
+# Type Hierarchy: any, unknown, and never
 
-any: nothing data type its dosenot check type
-unknown: its mean define time type unknown but useing time assign type if assign ok but not assign give the error
-never: mainly use error handling its heairky bottom type its to branch to switch
+TypeScripts type system is organized into a formal type hierarchy with Top and Bottom types.
 
-# Type Hierarchy
+any: Represents any data type without type compile check type allowing any operations without type compile.
+unknown: Represents a value whose type is not yet known. Unlike any, operations cannot be performed on it until it is narrowed or verified through type checks.
+never: The bottom type in the type hierarchy. It represents values that never occur and is primarily used functions that throw errors or for exhaustive checks in switch cases.
 
-any: Represents any data type and bypasses type checking completely.
+## Why unknown is Always Preferred Over any
 
-unknown: Represents a value whose type is not yet known. Operations cannot be performed on it until it is assigned or narrowed to a specific type, otherwise it throws an error.
+Using any disables TypeScript's safety features
 
-never: The bottom type in the type hierarchy. Primarily used for functions that throw errors or for exhaustive type checking in switch/branch logic.
+let unsafe: any = "Hello World";
+unsafe.notAFunction();
