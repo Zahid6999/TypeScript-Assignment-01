@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./src",
+    "rootDir": "./",
     "outDir": "./dist",
-
     "module": "esnext",
     "target": "esnext",
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["solutions.ts"]
 }

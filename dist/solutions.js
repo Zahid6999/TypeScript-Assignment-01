@@ -19,7 +19,6 @@ const processInput = (input) => {
     }
 };
 function formatCoordinate(coordinate) {
-    //   console.log(coordinate);
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
@@ -66,20 +65,4 @@ const validateAgeAsync = async (age) => {
             reject(new Error("Access Denied: Must be 18 or older"));
         }
     });
-};
-const test = async () => {
-    try {
-        const result1 = await validateAgeAsync(20);
-        console.log(result1);
-    }
-    catch (error) {
-        console.error(error);
-    }
-    try {
-        const result2 = await validateAgeAsync(15);
-        console.log(result2);
-    }
-    catch (error) {
-        console.error(error);
-    }
 };
